@@ -4,7 +4,7 @@ public class Product {
     private double price;
     private int quantity;
 
-    public Product (String name, double price, int quantity){
+    public Product(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
@@ -32,6 +32,14 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public double total() {
+        return price * quantity;
+    }
+
+    public void updatePrice(double percentage) {
+        price = price * (1.0 + percentage / 100.0);
     }
 
     @Override
